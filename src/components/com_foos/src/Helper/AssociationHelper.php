@@ -9,17 +9,17 @@
 
 namespace Joomla\Component\Foos\Site\Helper;
 
-defined('_JEXEC') or die;
+\defined('_JEXEC') or die;
 
 use Joomla\CMS\Factory;
 use Joomla\CMS\Language\Associations;
 use Joomla\Component\Categories\Administrator\Helper\CategoryAssociationHelper;
-use Joomla\Component\Foos\Site\Helper\Route as FoosHelperRoute;
+use Joomla\Component\Foos\Site\Helper\RouteHelper;
 
 /**
  * Foos Component Association Helper
  *
- * @since  3.0
+ * @since  __BUMP_VERSION__
  */
 abstract class AssociationHelper extends CategoryAssociationHelper
 {
@@ -31,7 +31,7 @@ abstract class AssociationHelper extends CategoryAssociationHelper
 	 *
 	 * @return  array   Array of associations for the item
 	 *
-	 * @since  3.0
+	 * @since  __BUMP_VERSION__
 	 */
 	public static function getAssociations($id = 0, $view = null)
 	{
@@ -49,7 +49,7 @@ abstract class AssociationHelper extends CategoryAssociationHelper
 
 				foreach ($associations as $tag => $item)
 				{
-					$return[$tag] = FoosHelperRoute::getFoosRoute($item->id, (int) $item->catid, $item->language);
+					$return[$tag] = RouteHelper::getFoosRoute($item->id, (int) $item->catid, $item->language);
 				}
 
 				return $return;

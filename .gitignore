@@ -1,6 +1,0 @@
-vendor/
-RoboFile.php
-composer.json
-composer.lock
-jorobo.ini
-package-lock.json
